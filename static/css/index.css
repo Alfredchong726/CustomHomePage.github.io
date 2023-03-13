@@ -1,0 +1,95 @@
+body {
+    background: rgb(16, 11, 92);
+    background: linear-gradient(90deg, rgba(16, 11, 92, 1) 8%, rgba(0, 10, 60, 1) 43%, rgba(1, 79, 120, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.time {
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.timeBox {
+    text-align: center;
+}
+
+.searchBar {
+    padding: 10px 30px 10px 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 600px;
+    height: 30px;
+    color: white;
+}
+
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitBtn {
+    background-color: transparent;
+    border: none;
+    transform: translateX(-110%);
+}
+
+.card {
+    width: 160px;
+    height: 80px;
+    background: #07182E;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card .content {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    background-image: linear-gradient(180deg, #e55d87, #5fc3e4);
+    height: 130%;
+    animation: border 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes border {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+.cards {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.github {
+    background-image: url("../images/github.svg");
+    color: white;
+}
